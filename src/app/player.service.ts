@@ -32,5 +32,10 @@ updatePlayer(updatedPlayer){
                          age: updatedPlayer.age});
 }
 
+deletePlayer(playerToCut){
+    var playerFirebase = this.findPlayerById(playerToCut.$key);
+    playerFirebase.remove();
+  }
+
 
 }

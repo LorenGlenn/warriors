@@ -20,4 +20,10 @@ export class EditPlayerComponent implements OnInit {
     this.playerService.updatePlayer(playerToUpdate);
   }
 
+  beginDeletingPlayer(playerToDelete){
+  if(confirm("Are you sure you want to cut this player?")){
+    this.playerService.deletePlayer(playerToDelete);
+  }
+}
+
 }
