@@ -1,7 +1,11 @@
 <h2>Current Roster</h2>
 
-<div *ngFor="let player of players | async" (click)="goToDetailPage(player)" class="panel panel-default">
+<div *ngFor="let player of players | async" class="panel panel-default">
   <div class="panel-body">
-    <h3>{{player.name}} - {{player.position}}</h3>
+    <h3 (click)="goToDetailPage(player)">{{player.name}} - {{player.position}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <hr>
+      <app-edit-player [selectedPlayer]="player"></app-edit-player>
+    </div>
   </div>
 </div>

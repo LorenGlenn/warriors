@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
-import { PLAYERS } from './mock-players';
+// import { PLAYERS } from './mock-players';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
@@ -22,5 +22,15 @@ addPlayer(newPlayer: Player) {
 findPlayerById(playerId: string){
   return this.angularFire.database.object('players/' + playerId);
   }
+
+updatePlayer(updatedPlayer){
+  var playerFirebase = this.findPlayerById(updatedPlayer.$key);
+  playerFirebase.update({name: updatedPlayer.name,
+                         position: updatedPlayer.position,
+                         height: updatedPlayer.height,
+                         weight: updatedPlayer.weight,
+                         age: updatedPlayer.age});
+}
+
 
 }

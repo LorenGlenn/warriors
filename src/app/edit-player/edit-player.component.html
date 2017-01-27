@@ -1,0 +1,22 @@
+<h4>Edit {{selectedPlayer.name}}</h4>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedPlayer.name">
+<br>
+
+<label>New Player Position:</label>
+<input [(ngModel)]="selectedPlayer.position">
+<br>
+
+<label>New Player Height:</label>
+<input [(ngModel)]="selectedPlayer.height">
+<br>
+
+<label>New Player Weight:</label>
+<input [(ngModel)]="selectedPlayer.weight">
+<br>
+
+<label>New Player Age:</label>
+<input [(ngModel)]="selectedPlayer.age">
+
+<button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
