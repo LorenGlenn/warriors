@@ -1,5 +1,7 @@
-<h4>Roster</h4>
+<h2>Current Roster</h2>
 
-<div *ngFor="let player of players">
+<div *ngFor="let player of players" (click)="goToDetailPage(player)" class="panel panel-default">
+  <div class="panel-body">
     <h3>{{player.name}} - {{player.position}}</h3>
+  </div>
 </div>
