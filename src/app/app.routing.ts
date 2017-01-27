@@ -1,8 +1,8 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AboutComponent }   from './about/about.component';
-import { RosterComponent }   from './roster/roster.component';
+import { AboutComponent } from './about/about.component';
+import { RosterComponent } from './roster/roster.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 const appRoutes: Routes = [
