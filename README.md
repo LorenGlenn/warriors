@@ -1,9 +1,23 @@
 # Warriors
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+By Loren Glenn
+
+This site allows users to see who is on the current roster for the Golden State Warriors and allows the admin user to update, delete or add a player.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Database
+
+Create a firebase account, create a new project and then create a file at src/app/api-keys.ts looking like this but with your project credentials:
+
+export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx",
+    databaseURL: "xxxx",
+    storageBucket: "xxxx",
+    messagingSenderId: "xxxx"
+  };
 
 ## Code scaffolding
 
