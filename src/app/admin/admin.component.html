@@ -1,0 +1,29 @@
+<h3>Add a Player to the Roster</h3>
+<div class="container">
+  <div>
+    <label>Name:</label>
+    <br>
+    <input #newName>
+  </div>
+  <div>
+    <label>Position:</label>
+    <br>
+    <input #newPosition>
+  </div>
+  <div>
+    <label>Height:</label>
+    <br>
+    <input #newHeight>
+  </div>
+  <div>
+    <label>Weight:</label>
+    <br>
+    <input #newWeight>
+  </div>
+  <div>
+    <label>Age:</label>
+    <br>
+    <input #newAge>
+  </div>
+  <button (click)="submitForm(newName.value, newPosition.value, newHeight.value, newWeight.value, newAge.value); newName.value=''; newPosition.value=''; newHeight.value=''; newWeight.value=''; newAge.value='';">Add</button>
+</div>

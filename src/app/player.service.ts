@@ -1,22 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
 import { PLAYERS } from './mock-players';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class PlayerService {
-
-  constructor() { }
+  players: FirebaseListObservable<any[]>;
+  constructor(private angularFire: AngularFire) {
+    this.players = angularFire.database.list('players')
+   }
 
   getPlayers() {
-  return PLAYERS;
+  return this.players;
 }
 
-findPlayerById(playerId: number){
-    for (var i = 0; i <= PLAYERS.length - 1; i++) {
-      if (PLAYERS[i].id === playerId) {
-        return PLAYERS[i];
-      }
-    }
+addPlayer(newPlayer: Player) {
+  this.players.push(newPlayer);
+}
+
+
+findPlayerById(playerId: string){
+  return this.angularFire.database.object('players/' + playerId);
   }
 
 }

@@ -1,0 +1,23 @@
+{ "players": [{
+    "name": "Stephen Curry",
+    "position": "PG",
+    "height": "6-3",
+    "weight": "180",
+    "age": "28",
+    "id": "1"
+    }, {
+    "name": "Klay Thompson",
+    "position": "SG",
+    "height": "6-7",
+    "weight": "200",
+    "age": "26",
+    "id": "2"
+      }, {
+    "name": "Kevin Durant",
+    "position": "PF",
+    "height": "6-11",
+    "weight": "225",
+    "age": "28",
+    "id": "3"
+  }]
+}
