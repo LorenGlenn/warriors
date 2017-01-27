@@ -18,7 +18,8 @@
 
 <label>New Player Age:</label>
 <input [(ngModel)]="selectedPlayer.age">
-
-<button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
+<br>
+<button class="btn btn-info" (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
 <hr>
-<button (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
+<button class="btn btn-danger"(click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
+<br>
